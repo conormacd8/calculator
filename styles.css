@@ -1,3 +1,4 @@
+/* Layout and general styles */
 *{
   box-sizing: border-box;
   margin: 0;
@@ -5,18 +6,156 @@
 }
 
 body{
-  font-family: 'Orbitron', sans-serif;
+  font-family: sans-serif;
   background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .container{
-  max-width: 800px;
-  width: 90%;
-  background: rgb(241, 239, 239);
-  display: grid;
-
+  border-radius: 20px;
+  background: black;
 }
 
+.grid-container{
+  display: grid;
+  width: 300px;
+  padding: 2em;
+  grid-template-areas:
+    "screen screen screen screen"
+    "reset clear percentage divide"
+    "num7 num8 num9 multiply"
+    "num4 num5 num6 minus"
+    "num1 num2 num3 plus"
+    "num0 num0 decimal equals";
+  gap: .6em .3em;
+  justify-content: center;
+}
+/* Button styling */
+
 .btn{
-  font-size: 3rem;
+  cursor: pointer;
+  font-size: 1.8rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#reset,
+#clear{
+  font-size: 1.6rem;
+}
+
+.btn-orange{
+  background-color: #f59906;
+  color: white;
+  font-weight: bold;
+}
+
+.btn-light-grey{
+  background-color: #a0a0a0;
+}
+.btn-dark-grey{
+  background-color: #313131;
+  color: white;
+}
+
+/* Screen / input styling */
+#screen{
+  color: white;
+  font-size: 2.5rem;
+  height: 100px;
+  display: flex;
+  justify-self: right;
+  align-items: flex-end;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+input{
+  background-color: transparent;
+  border: none;
+  color: white;
+  text-align: right;
+  width: 100%;
+  font-size: 2.5rem;
+  letter-spacing: 1.5px;
+}
+input:active,
+input:focus{
+  outline: none;
+}
+
+input::placeholder{
+  color: white;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Grid template areas */
+#screen{
+  grid-area: screen;
+}
+#reset{
+  grid-area: reset;
+}
+#clear{
+  grid-area: clear;
+}
+#percentage{
+  grid-area: percentage;
+}
+#divide{
+  grid-area: divide;
+}
+#equals{
+  grid-area: equals;
+}
+#multiply{
+  grid-area: multiply;
+}
+#minus{
+  grid-area: minus;
+}
+#plus{
+  grid-area: plus;
+}
+#num1{
+  grid-area: num1;
+}
+#num2{
+  grid-area: num2;
+}
+#num3{
+  grid-area: num3;
+}
+#num4{
+  grid-area: num4;
+}
+#num5{
+  grid-area: num5;
+}
+#num6{
+  grid-area: num6;
+}
+#num7{
+  grid-area: num7;
+}
+#num8{
+  grid-area: num8;
+}
+#num9{
+  grid-area: num9;
+}
+#num0{
+  grid-area: num0;
+  width: 100%;
+  border-radius: 100vmax;
 }

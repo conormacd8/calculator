@@ -4,37 +4,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="styles.css" />
 
     <title>Calculator</title>
   </head>
   <body>
-    <div class="container grid-container" id="calculator">
-      <button class="btn" id="1">1</button>
-      <button class="btn" id="2">2</button>
-      <button class="btn" id="3">3</button>
-      <button class="btn" id="4">4</button>
-      <button class="btn" id="5">5</button>
-      <button class="btn" id="6">6</button>
-      <button class="btn" id="7">7</button>
-      <button class="btn" id="8">8</button>
-      <button class="btn" id="9">9</button>
-      <button class="btn" id="0">0</button>
-      <button class="btn" id="decimal">.</button>
-      <button class="btn btn-orange" id="plus">+</button>
-      <button class="btn btn-orange" id="minus">-</button>
-      <button class="btn btn-orange" id="multiply">×</button>
-      <button class="btn btn-orange" id="divide">÷</button>
-      <button class="btn btn-orange" id="equals">=</button>
-      <button class="btn" id="clear">C</button>
-      <button class="btn" id="reset">AC</button>
-      <button class="btn" id="percentage">%</button>
+    <div class="container" id="calculator">
+      <div class="grid-container">
+        <div id="screen">
+          <input type="number" placeholder="0" id="user-value" />
+        </div>
+        <button class="btn btn-dark-grey" id="num1">1</button>
+        <button class="btn btn-dark-grey" id="num2">2</button>
+        <button class="btn btn-dark-grey" id="num3">3</button>
+        <button class="btn btn-dark-grey" id="num4">4</button>
+        <button class="btn btn-dark-grey" id="num5">5</button>
+        <button class="btn btn-dark-grey" id="num6">6</button>
+        <button class="btn btn-dark-grey" id="num7">7</button>
+        <button class="btn btn-dark-grey" id="num8">8</button>
+        <button class="btn btn-dark-grey" id="num9">9</button>
+        <button class="btn btn-dark-grey" id="num0">0</button>
+        <button class="btn btn-dark-grey" id="decimal">.</button>
+        <button class="btn btn-orange" id="equals">=</button>
+        <button class="btn btn-orange" id="plus">+</button>
+        <button class="btn btn-orange" id="minus">-</button>
+        <button class="btn btn-orange" id="multiply">×</button>
+        <button class="btn btn-orange" id="divide">÷</button>
+        <button class="btn btn-light-grey" id="clear">C</button>
+        <button class="btn btn-light-grey" id="reset">AC</button>
+        <button class="btn btn-light-grey" id="percentage">%</button>
+      </div>
     </div>
     <script src="index.js"></script>
   </body>
