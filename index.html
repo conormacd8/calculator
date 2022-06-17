@@ -2,39 +2,36 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Calculator</title>
+    <link href="styles.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="container" id="calculator">
-      <div class="grid-container">
-        <div id="screen">
-          <input type="number" placeholder="0" id="user-value" />
-        </div>
-        <button class="btn btn-dark-grey" id="num1">1</button>
-        <button class="btn btn-dark-grey" id="num2">2</button>
-        <button class="btn btn-dark-grey" id="num3">3</button>
-        <button class="btn btn-dark-grey" id="num4">4</button>
-        <button class="btn btn-dark-grey" id="num5">5</button>
-        <button class="btn btn-dark-grey" id="num6">6</button>
-        <button class="btn btn-dark-grey" id="num7">7</button>
-        <button class="btn btn-dark-grey" id="num8">8</button>
-        <button class="btn btn-dark-grey" id="num9">9</button>
-        <button class="btn btn-dark-grey" id="num0">0</button>
-        <button class="btn btn-dark-grey" id="decimal">.</button>
-        <button class="btn btn-orange" id="equals">=</button>
-        <button class="btn btn-orange" id="plus">+</button>
-        <button class="btn btn-orange" id="minus">-</button>
-        <button class="btn btn-orange" id="multiply">×</button>
-        <button class="btn btn-orange" id="divide">÷</button>
-        <button class="btn btn-light-grey" id="clear">C</button>
-        <button class="btn btn-light-grey" id="reset">AC</button>
-        <button class="btn btn-light-grey" id="percentage">%</button>
+    <div class="calculator-grid">
+      <div class="output">
+        <div data-previous-operand class="previous-operand"></div>
+        <div data-current-operand class="current-operand"></div>
       </div>
+      <button data-all-clear class="span-two">AC</button>
+      <button data-delete>DEL</button>
+      <button data-operation>÷</button>
+      <button data-number>1</button>
+      <button data-number>2</button>
+      <button data-number>3</button>
+      <button data-operation>*</button>
+      <button data-number>4</button>
+      <button data-number>5</button>
+      <button data-number>6</button>
+      <button data-operation>+</button>
+      <button data-number>7</button>
+      <button data-number>8</button>
+      <button data-number>9</button>
+      <button data-operation>-</button>
+      <button data-number>.</button>
+      <button data-number>0</button>
+      <button data-equals class="span-two">=</button>
     </div>
-    <script src="index.js"></script>
   </body>
 </html>

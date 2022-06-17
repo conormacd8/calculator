@@ -1,161 +1,60 @@
-/* Layout and general styles */
-*{
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  margin: 0;
+  font-family: Gotham Rounded, sans-serif;
+  font-weight: normal;
+}
+
+body {
   padding: 0;
-}
-
-body{
-  font-family: sans-serif;
-  background-color: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.container{
-  border-radius: 20px;
-  background: black;
-}
-
-.grid-container{
-  display: grid;
-  width: 300px;
-  padding: 2em;
-  grid-template-areas:
-    "screen screen screen screen"
-    "reset clear percentage divide"
-    "num7 num8 num9 multiply"
-    "num4 num5 num6 minus"
-    "num1 num2 num3 plus"
-    "num0 num0 decimal equals";
-  gap: .6em .3em;
-  justify-content: center;
-}
-/* Button styling */
-
-.btn{
-  cursor: pointer;
-  font-size: 1.8rem;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#reset,
-#clear{
-  font-size: 1.6rem;
-}
-
-.btn-orange{
-  background-color: #f59906;
-  color: white;
-  font-weight: bold;
-}
-
-.btn-light-grey{
-  background-color: #a0a0a0;
-}
-.btn-dark-grey{
-  background-color: #313131;
-  color: white;
-}
-
-/* Screen / input styling */
-#screen{
-  color: white;
-  font-size: 2.5rem;
-  height: 100px;
-  display: flex;
-  justify-self: right;
-  align-items: flex-end;
-  padding-bottom: 10px;
-  width: 100%;
-}
-
-input{
-  background-color: transparent;
-  border: none;
-  color: white;
-  text-align: right;
-  width: 100%;
-  font-size: 2.5rem;
-  letter-spacing: 1.5px;
-}
-input:active,
-input:focus{
-  outline: none;
-}
-
-input::placeholder{
-  color: white;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
   margin: 0;
+  background: linear-gradient(to right, #00AAFF, #00FF6C);
 }
-/* Grid template areas */
-#screen{
-  grid-area: screen;
+
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 }
-#reset{
-  grid-area: reset;
+
+.calculator-grid>button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, .75);
 }
-#clear{
-  grid-area: clear;
+
+.calculator-grid>button:hover {
+  background-color: rgba(255, 255, 255, .9);
 }
-#percentage{
-  grid-area: percentage;
+
+.span-two {
+  grid-column: span 2;
 }
-#divide{
-  grid-area: divide;
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, .75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
 }
-#equals{
-  grid-area: equals;
+
+.output .previous-operand {
+  color: rgba(255, 255, 255, .75);
+  font-size: 1.5rem;
 }
-#multiply{
-  grid-area: multiply;
-}
-#minus{
-  grid-area: minus;
-}
-#plus{
-  grid-area: plus;
-}
-#num1{
-  grid-area: num1;
-}
-#num2{
-  grid-area: num2;
-}
-#num3{
-  grid-area: num3;
-}
-#num4{
-  grid-area: num4;
-}
-#num5{
-  grid-area: num5;
-}
-#num6{
-  grid-area: num6;
-}
-#num7{
-  grid-area: num7;
-}
-#num8{
-  grid-area: num8;
-}
-#num9{
-  grid-area: num9;
-}
-#num0{
-  grid-area: num0;
-  width: 100%;
-  border-radius: 100vmax;
+
+.output .current-operand {
+  color: white;
+  font-size: 2.5rem;
 }
